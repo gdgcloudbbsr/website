@@ -1,2 +1,2 @@
 # website
-Website of GDG Cloud Bhubaneswar
+Official Website of GDG Cloud Bhubaneswar
