@@ -1,0 +1,72 @@
+@use "../Utils/" as *;
+
+.footer {
+  background: linear-gradient(181deg, rgba(32, 33, 36, 0) 0%, #ffbb01 100%);
+  width: 100%;
+  height: 100%;
+  padding: 4rem 0 2rem;
+
+  &-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    width: 100%;
+    max-width: 200px;
+    @include breakpoints(md) {
+      max-width: 250px;
+    }
+    @include breakpoints(lg) {
+      max-width: 350px;
+    }
+  }
+
+  .social-links {
+    margin-top: 1rem;
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .right {
+    text-transform: capitalize;
+    font-size: var(--fs-18);
+
+    &-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      a {
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        &:hover {
+          opacity: 0.9;
+          scale: 1.05;
+        }
+      }
+    }
+  }
+
+  .copyright {
+    text-align: center;
+    margin-top: 3rem;
+    font-weight: normal;
+    letter-spacing: 1px;
+    font-size: var(--fs-14);
+    opacity: 0.8;
+    h4 {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      justify-content: center;
+      font-size: var(--fs-16);
+    }
+  }
+}

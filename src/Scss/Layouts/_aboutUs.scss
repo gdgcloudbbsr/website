@@ -1,0 +1,228 @@
+@use "../Utils/" as *;
+
+.AboutUs {
+  position: relative;
+  .overlayImage {
+    position: absolute;
+    bottom: -20rem;
+    left: -10rem;
+    width: 800px;
+    object-fit: cover;
+    rotate: 20deg;
+    opacity: 0.3;
+    display: none;
+
+    @include breakpoints(md) {
+      display: inline-block;
+    }
+  }
+  
+  .image {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+
+    .opacity {
+      position: absolute;
+      top: -2rem;
+      left: 0;
+      width: 100%;
+      height: 00vh;
+      background: linear-gradient(
+        180deg,
+        #202124 60.63%,
+        rgba(32, 33, 36, 0) 100%
+      );
+
+      @include breakpoints(sm) {
+        height: 10vh;
+      }
+      @include breakpoints(md) {
+        height: 20vh;
+      }
+    }
+
+    &-container {
+      width: 100%;
+      height: 100%;
+      min-height: 100vh;
+      background: url("/assets/img1.webp"),
+        lightgray 3.488px -11.196px / 100% 124.235% no-repeat;
+      background-position: bottom;
+      background-repeat: no-repeat;
+      background-size: cover;
+      filter: saturate(0);
+    }
+
+    .cursor {
+      position: absolute;
+      width: 70px;
+      aspect-ratio: 1;
+      background-color: var(--white);
+      color: var(--black);
+      display: grid;
+      place-content: center;
+      border-radius: 50%;
+      font-weight: bold;
+      translate: -50% -50%;
+      z-index: 999;
+      cursor: pointer;
+      opacity: 0;
+      scale: 0;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+      span {
+        background-color: var(--white);
+        width: 70px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        display: grid;
+        place-content: center;
+        border: 2px solid var(--black);
+      }
+
+      .ring {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        border-radius: 100%;
+        opacity: 0.8;
+        z-index: -2;
+        background-color: var(--white);
+      }
+    }
+  }
+
+  &-container {
+    background: linear-gradient(180deg, #428eff 0%, #202124 100%);
+    width: 100%;
+    height: 100%;
+    padding-top: 6rem;
+    position: relative;
+
+    .BadgeGDG {
+      position: absolute;
+      top: -8.5rem;
+      right: 2rem;
+      filter: drop-shadow(
+        rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+        rgba(0, 0, 0, 0.3) 0px 8px 16px -8px
+      );
+
+      svg {
+        width: 100px;
+      }
+    }
+
+    @include breakpoints(md) {
+      padding-top: 10rem;
+      .BadgeGDG {
+        top: -7rem;
+
+        svg {
+          width: 200px;
+        }
+      }
+    }
+
+    @include breakpoints(lg) {
+      padding-top: 8rem;
+      .BadgeGDG {
+        right: 6rem;
+        svg {
+          width: 200px;
+        }
+      }
+    }
+
+    .tag {
+      background-color: var(--black);
+      width: 100%;
+      text-align: left;
+      padding: 1rem 3rem 1rem 1rem;
+      position: absolute;
+      top: -1.5rem;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    .Wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 4rem;
+      position: relative;
+    }
+
+    .col {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      p {
+        max-width: 800px;
+      }
+
+      .logo {
+        max-width: 500px;
+      }
+
+      &-1 {
+        .img {
+          cursor: pointer;
+          margin-top: 1rem;
+          border: 6px solid var(--black);
+          border-radius: 0.5rem;
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+      }
+
+      &-2 {
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .item {
+        width: 100%;
+        max-width: 500px;
+        background-color: var(--black);
+        padding: 1rem 2rem;
+        border-radius: 0.5rem;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        span {
+          margin-left: auto;
+          font-size: var(--fs-21);
+          max-width: 250px;
+          line-height: 1.5;
+          text-align: right;
+        }
+
+        &:nth-child(1) {
+          border-left: 12px solid var(--yellow);
+        }
+        &:nth-child(2) {
+          border-left: 12px solid var(--red);
+          margin-left: auto;
+        }
+        &:nth-child(3) {
+          border-left: 12px solid var(--green);
+        }
+        &:nth-child(4) {
+          border-left: 12px solid var(--blue);
+          margin-left: auto;
+        }
+      }
+    }
+
+    @include breakpoints(md) {
+      .Wrapper {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
+}

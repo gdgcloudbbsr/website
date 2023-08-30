@@ -1,0 +1,27 @@
+{
+  "upComingEvents": [
+    {
+      "text": "DevFest 2023",
+      "link": "/events",
+      "img": "/assets/img1.webp"
+    }
+  ],
+  "pastEvents": [
+    {
+      "text": "Google I/O Extended 2023",
+      "tag": "Jul 22"
+    },
+    {
+      "text": "Google Cloud Community Day 2023",
+      "tag": "Mar 19"
+    },
+    {
+      "text": "Flutter Forward Extended",
+      "tag": "Mar 5"
+    },
+    {
+      "text": "DevFest 2022",
+      "tag": "Dec 11"
+    }
+  ]
+}

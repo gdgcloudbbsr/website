@@ -1,0 +1,63 @@
+.HeaderTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  p {
+    margin-top: 0.5rem;
+  }
+
+  .lines {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 0.5rem;
+
+    div {
+      height: 0.5rem;
+      border-radius: 1rem;
+
+      &:nth-child(1) {
+        width: 80px;
+        background-color: var(--green);
+      }
+      &:nth-child(2) {
+        width: 40px;
+        background-color: var(--blue);
+      }
+      &:nth-child(3) {
+        width: 20px;
+        background-color: var(--red);
+      }
+      &:nth-child(4) {
+        width: 10px;
+        background-color: var(--yellow);
+      }
+    }
+  }
+}
+
+.PageHeading {
+  text-align: center;
+  margin-top: 8.5rem;
+  padding-inline: 1rem;
+  .hide {
+    margin-inline: auto;
+    h1 {
+      color: var(--white) !important;
+      -webkit-text-stroke-color: var(--white) !important;
+      -webkit-text-fill-color: var(--white) !important;
+    }
+  }
+  p {
+    margin-inline: auto;
+  }
+  .lines {
+    justify-content: center;
+  }
+
+  .scroll {
+    margin-top: 1.5rem;
+    translate: 0 0;
+  }
+}

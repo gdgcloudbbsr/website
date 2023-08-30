@@ -1,0 +1,97 @@
+@use "../Utils/" as *;
+
+.GalleryBanner {
+  margin-top: 6rem;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  &-container {
+    padding-block: 1rem;
+    .imgItems {
+      &-1 {
+        .item {
+          img {
+            padding-top: 0rem !important;
+          }
+        }
+      }
+      &-2 {
+        .item {
+          img {
+            padding-top: 0rem;
+          }
+        }
+      }
+      .item {
+        transition: all 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+        &:hover {
+          img {
+            filter: saturate(1);
+          }
+        }
+        img {
+          padding-left: 1rem;
+          padding-top: 1rem;
+          width: 250px;
+          height: 250px;
+          object-fit: cover;
+          filter: saturate(0);
+
+          @include breakpoints(md) {
+            width: 350px;
+          }
+          @include breakpoints(lg) {
+            width: 400px;
+            height: 300px;
+          }
+        }
+      }
+    }
+  }
+
+  .Namebanner {
+    padding-block: 0.5rem;
+    width: 100vw;
+    height: 100%;
+    min-height: 80px;
+    position: relative;
+
+    @include breakpoints(sm) {
+      min-height: 100px;
+    }
+
+    &-container {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: nowrap;
+
+      top: 50%;
+      translate: 0 -50%;
+      h5 {
+        white-space: nowrap;
+      }
+      .ico {
+        width: 55px;
+        object-fit: contain;
+      }
+    }
+    &-1 {
+      background-color: var(--blue);
+      .Namebanner-container-1 {
+        left: 1rem;
+      }
+    }
+
+    &-2 {
+      background-color: var(--green);
+      .Namebanner-container-2 {
+        right: -1rem;
+      }
+    }
+  }
+}
