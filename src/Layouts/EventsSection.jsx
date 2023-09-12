@@ -85,7 +85,7 @@ const EventsSection = () => {
             />
           ))}
           <div className="PastEvents">
-            <HeaderTitle h2={"Past Events"} />
+            <HeaderTitle h3={"Past Events"} />
             <div className="PastEvents-container">
               {data.pastEvents.map((elem, index) => (
                 <Link to={"/events"} className="item" key={index}>

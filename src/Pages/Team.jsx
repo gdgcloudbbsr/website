@@ -93,37 +93,6 @@ const Team = () => {
           duration: 1,
           zIndex: -1,
         });
-
-      gsap.from(".Organizers", {
-        y: 200,
-        autoAlpha: 0,
-        duration: 2,
-        scrollTrigger: {
-          start: "top 90%",
-          end: "top 20%",
-          trigger: ".Organizers .TeamSection-text",
-        },
-      });
-      gsap.from(".CoreTeam", {
-        y: 200,
-        autoAlpha: 0,
-        duration: 2,
-        scrollTrigger: {
-          start: "top 90%",
-          end: "top 20%",
-          trigger: ".CoreTeam .TeamSection-text",
-        },
-      });
-      gsap.from(".Volunteers", {
-        y: 200,
-        autoAlpha: 0,
-        duration: 2,
-        scrollTrigger: {
-          start: "top 90%",
-          end: "top 20%",
-          trigger: ".Volunteers .TeamSection-text",
-        },
-      });
     }, main.current);
     return () => ctxAbout.revert();
   }, []);
@@ -168,7 +137,7 @@ const Team = () => {
         <Wrapper>
           <div className="TeamSection Organizers">
             <div className="TeamSection-text">
-              <HeaderTitle h1={"Organizers"} />
+              <HeaderTitle h2={"Organizers"} />
             </div>
 
             <Carsoual>
@@ -182,12 +151,12 @@ const Team = () => {
 
           <div className="TeamSection CoreTeam">
             <div className="TeamSection-text">
-              <HeaderTitle h1={"Core Team Member"} />
+              <HeaderTitle h2={"Core Team Member"} />
             </div>
 
             <Carsoual>
               {data.Members.map((elem, index) => (
-                <div className="TeamSection-container-member" key={index}>
+                <div className={`TeamSection-container-member red`} key={index}>
                   <TeamMember data={elem} />
                 </div>
               ))}
@@ -196,7 +165,7 @@ const Team = () => {
 
           <div className="TeamSection Volunteers">
             <div className="TeamSection-text">
-              <HeaderTitle h1={"Volunteers"} />
+              <HeaderTitle h2={"Volunteers"} />
             </div>
 
             <Carsoual>

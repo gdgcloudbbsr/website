@@ -17,6 +17,13 @@
     }
   }
 
+  .PageHeading {
+    .hide,
+    p {
+      padding-inline: 1rem !important;
+    }
+  }
+
   .Team-Container {
     margin-bottom: 8rem;
     position: relative;
@@ -60,6 +67,33 @@
     margin-top: 6rem;
     width: 100%;
 
+    &:nth-child(1) {
+      .TeamMember {
+        .overlay {
+          svg {
+            fill: var(--red) !important;
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+          }
+        }
+        .text {
+          background: var(--red) !important;
+        }
+      }
+    }
+    &:nth-child(2) {
+      .TeamMember {
+        .overlay {
+          svg {
+            fill: var(--green) !important;
+          }
+        }
+        .text {
+          background: var(--green) !important;
+        }
+      }
+    }
+
     &:first-child {
       margin-top: 4rem;
     }
@@ -91,7 +125,7 @@
 
   .overlayBox {
     div {
-      top: 500px !important;
+      top: 300px !important;
       width: 500px;
       filter: blur(200px) !important;
       z-index: 99;

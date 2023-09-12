@@ -27,6 +27,14 @@ const App = () => {
         },
       });
       ScrollTrigger.refresh();
+      if (location.pathname === "/") {
+        document.title = "Home | GDG Bhubaneswar";
+      } else {
+        document.title = `${
+          location.pathname.substring(1).charAt(0).toUpperCase() +
+          location.pathname.substring(1).slice(1)
+        }  | GDG Bhubaneswar`;
+      }
     }, app.current);
 
     return () => ctx.revert();
@@ -38,7 +46,6 @@ const App = () => {
         <div className="progress" ref={progressBar}></div>
         <Header />
         <Outlet />
-        {/* <div style={{ height: "100vh" }}></div> */}
         <Footer />
       </div>
     </>

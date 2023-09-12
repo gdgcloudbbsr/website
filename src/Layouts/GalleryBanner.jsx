@@ -25,34 +25,26 @@ const GalleryBanner = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.to(
-        banner1.current,
-        {
-          scrollTrigger: {
-            trigger: banner1.current,
-            start: "top 90%",
-            end: "top 00%",
-            scrub: 3,
-          },
-          left: "-40%",
-          ease: "power2.out",
+      gsap.to(banner1.current, {
+        scrollTrigger: {
+          trigger: banner1.current,
+          start: "top 90%",
+          end: "top 00%",
+          scrub: 4,
         },
-        "a"
-      );
-      gsap.to(
-        banner2.current,
-        {
-          scrollTrigger: {
-            trigger: banner2.current,
-            start: "top 100%",
-            end: "top 00%",
-            scrub: 3,
-          },
-          right: "-50%",
-          ease: "power2.out",
+        left: "-40%",
+        ease: "power2.out",
+      });
+      gsap.to(banner2.current, {
+        scrollTrigger: {
+          trigger: banner2.current,
+          start: "top 100%",
+          end: "top 00%",
+          scrub: 4,
         },
-        "a"
-      );
+        right: "-50%",
+        ease: "power2.out",
+      });
     }, main.current);
     return () => ctx.revert();
   }, []);

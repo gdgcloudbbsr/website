@@ -8,6 +8,7 @@ import {
 } from "react-icons/ai";
 import data from "../Data/SocialLinks.json";
 import { Link } from "react-router-dom";
+import { animateScroll as scroll } from "react-scroll";
 
 const Footer = () => {
   const currentDate = new Date();
@@ -40,16 +41,24 @@ const Footer = () => {
           </div>
           <div className="right">
             <div className="right-container">
-              <Link to={"/about"}>About</Link>
-              <Link to={"/events"}>Events</Link>
-              <Link to={"/team"}>Team</Link>
-              <Link to={"/gallery"}>Gallery</Link>
+              <Link to={"/about"} onClick={() => scroll.scrollToTop()}>
+                About
+              </Link>
+              <Link to={"/events"} onClick={() => scroll.scrollToTop()}>
+                Events
+              </Link>
+              <Link to={"/team"} onClick={() => scroll.scrollToTop()}>
+                Team
+              </Link>
+              <Link to={"/gallery"} onClick={() => scroll.scrollToTop()}>
+                Gallery
+              </Link>
             </div>
           </div>
         </div>
         <div className="copyright">
           <h4>
-            <AiOutlineCopyrightCircle className="ico"/>
+            <AiOutlineCopyrightCircle className="ico" />
             Copyright {currentDate.getFullYear()} GDG Bhubaneswar
           </h4>
         </div>
