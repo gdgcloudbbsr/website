@@ -37,8 +37,6 @@ const Header = () => {
     gsap.timeline({ defaults: { ease: "power2.inOut" } }).reverse()
   );
 
-  const progressBar = useRef(null);
-
   const toggleMenu = (menuOpen) => {
     if (menuOpen === true) {
       tl.current
@@ -103,6 +101,7 @@ const Header = () => {
                   </div>
                 ))}
                 <Link
+                  to={"https://gdg.community.dev/gdg-bhubaneswar/"}
                   className="PrimaryButton"
                   onClick={() => {
                     setMenuOpen(false);

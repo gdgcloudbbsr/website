@@ -1,12 +1,11 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { BsArrowUpRight } from "react-icons/bs";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const EventsCard = ({ img, title, link }) => {
   const main = useRef(null);
   const cursor = useRef(null);
-  const navigate = useNavigate();
   useEffect(() => {
     const ctx = gsap.context(() => {
       main.current.addEventListener("mousemove", (e) => {
@@ -67,13 +66,13 @@ const EventsCard = ({ img, title, link }) => {
   }, []);
   return (
     <div className="EventsCard" ref={main}>
-      <div className="cursor" ref={cursor} onClick={() => navigate(link)}>
+      <Link to={link} className="cursor" ref={cursor}>
         <BsArrowUpRight />
         <div className="ring"></div>
         <div className="ring"></div>
         <div className="ring"></div>
         <div className="ring"></div>
-      </div>
+      </Link>
       <div className="tag">upcoming</div>
       <div className="img">
         <img src={img} alt="GDG Bhubaneswar Events" />

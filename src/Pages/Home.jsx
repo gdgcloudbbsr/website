@@ -4,7 +4,7 @@ import EventsSection from "../Layouts/EventsSection";
 import GalleryBanner from "../Layouts/GalleryBanner";
 import GallerySection from "../Layouts/GallerySection";
 import Hero from "../Layouts/Hero";
-import TeamSection from "../Layouts/TeamSection";
+// import TeamSection from "../Layouts/TeamSection";
 import WhatGDG from "../Layouts/WhatGDG";
 import WorkshopsSection from "../Layouts/WorkshopsSection";
 
@@ -18,7 +18,7 @@ const Home = () => {
       <EventsSection />
       <WorkshopsSection />
       <Banner />
-      <TeamSection />
+      {/* <TeamSection /> */}
       <GallerySection />
     </>
   );

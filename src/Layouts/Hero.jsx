@@ -3,7 +3,7 @@ import Wrapper from "../Components/Wrapper";
 import gsap from "gsap";
 
 import data from "../Data/HeroSection.json";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Hero = () => {
   const image = useRef(null);
@@ -136,12 +136,9 @@ const Hero = () => {
               <h3>{data.h3}</h3>
               <h1>{data.h1}</h1>
               <p>{data.p}</p>
-              <button
-                className="button1 links"
-                onClick={() => navigate(data.link)}
-              >
+              <Link to={data.link} className="button1 links">
                 <span>{data.btnText}</span>
-              </button>
+              </Link>
               <div className="scroll" ref={scroll}>
                 <svg
                   width="21"

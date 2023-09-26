@@ -19,7 +19,7 @@
   @include breakpoints(md) {
     min-height: 300px;
     margin-top: -28rem;
-  }
+  }  
 
   @include breakpoints(lg) {
     margin-top: -18rem;
@@ -121,7 +121,7 @@
       background-color: var(--red);
       width: 100%;
       height: 100%;
-      filter: blur(5px);
+      filter: blur(1px);
       z-index: -1;
     }
 

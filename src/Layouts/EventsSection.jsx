@@ -94,7 +94,10 @@ const EventsSection = () => {
                 </Link>
               ))}
             </div>
-            <Link to="/events" className="PrimaryButton">
+            <Link
+              to="https://gdg.community.dev/gdg-bhubaneswar/"
+              className="PrimaryButton"
+            >
               <span>See Other Events</span>
               <span>See Other Events</span>
             </Link>

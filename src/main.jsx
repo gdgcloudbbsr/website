@@ -4,12 +4,13 @@ import App from "./App.jsx";
 import "./Scss/index.scss";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Home from "./Pages/Home.jsx";
-import Team from "./Pages/Team.jsx";
-import Gallery from "./Pages/Gallery.jsx";
-import Events from "./Pages/Events.jsx";
-import Contacts from "./Pages/Contacts.jsx";
-import About from "./Pages/About.jsx";
+// import Team from "./Pages/Team.jsx";
+// import Gallery from "./Pages/Gallery.jsx";
+// import Events from "./Pages/Events.jsx";
+// import Contacts from "./Pages/Contacts.jsx";
+// import About from "./Pages/About.jsx";
 import Error404 from "./Pages/Error404.jsx";
+import ComingSoon from "./Pages/ComingSoon.jsx";
 
 const AppRouter = createBrowserRouter([
   {
@@ -22,23 +23,23 @@ const AppRouter = createBrowserRouter([
       },
       {
         path: "/about",
-        element: <About />,
+        element: <ComingSoon />,
       },
       {
         path: "/team",
-        element: <Team />,
+        element: <ComingSoon />,
       },
       {
         path: "/gallery",
-        element: <Gallery />,
+        element: <ComingSoon />,
       },
       {
         path: "/events",
-        element: <Events />,
+        element: <ComingSoon />,
       },
       {
         path: "/contact",
-        element: <Contacts />,
+        element: <ComingSoon />,
       },
     ],
   },
