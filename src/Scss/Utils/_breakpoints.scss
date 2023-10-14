@@ -1,0 +1,34 @@
+@mixin breakpoints($br) {
+  @if $br == sm {
+    @media (min-width: 481px) {
+      @content;
+    }
+  }
+  @if $br == smMax {
+    @media (max-width: 481px) {
+      @content;
+    }
+  }
+
+  @if $br == md {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+  @if $br == mdMax {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+
+  @if $br == lg {
+    @media (min-width: 1000px) {
+      @content;
+    }
+  }
+  @if $br == lgMax {
+    @media (max-width: 1000px) {
+      @content;
+    }
+  }
+}

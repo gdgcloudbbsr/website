@@ -1,0 +1,92 @@
+{
+  "Members": [
+    {
+      "name": "Basanta Moharana",
+      "GDGPost": "GDG Organizer",
+      "CompanyName": "WP Design system",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/basanntakumar/",
+        "twitter": "https://twitter.com/uxlogix",
+        "facebook": null
+      },
+      "image": "assets/team/1.webp"
+    },
+    {
+      "name": "Suraj Harichandan",
+      "GDGPost": "GDG Organizer",
+      "CompanyName": "Salesforce",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/suraj-harichandan/",
+        "twitter": "https://twitter.com/suraj_somu",
+        "facebook": "https://www.facebook.com/suraj.harichandan"
+      },
+      "image": "assets/team/2.webp"
+    },
+    {
+      "name": "Saswat Samal",
+      "GDGPost": "Core Team Lead",
+      "CompanyName": "EY Global Delivery Services India",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/saswatsamal/",
+        "twitter": "https://twitter.com/TweetSaswat",
+        "facebook": null
+      },
+      "image": "assets/team/3.webp"
+    },
+    {
+      "name": "Jayashree tripathy",
+      "GDGPost": "Women Techmaker Ambassador",
+      "CompanyName": "Thoughtworks",
+      "social": {
+        "twitter": "https://twitter.com/JayashreeT99",
+        "facebook": null,
+        "linkedin": null
+      },
+      "image": "assets/team/4.webp"
+    },
+    {
+      "name": "Saswat Mohanty",
+      "GDGPost": "Core Team",
+      "CompanyName": "Computer Software",
+      "social": {
+        "twitter": "https://twitter.com/Saswat7101",
+        "linkedin": "https://www.linkedin.com/in/saswat-mohanty-3460321b4/",
+        "facebook": "https://www.facebook.com/saswat.mohanty.946"
+      },
+      "image": "assets/team/5.webp"
+    },
+    {
+      "name": "Rupali Swain",
+      "GDGPost": "Core Team",
+      "CompanyName": "Education Management",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/rupali-swain-01aa9b1ba",
+        "facebook": "https://www.facebook.com/rupali.swain.543",
+        "twitter": null
+      },
+      "image": "assets/team/6.webp"
+    },
+    {
+      "name": "Sunanda Samantaray",
+      "GDGPost": "Core Team",
+      "CompanyName": "Education Management",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/sunanda-samantaray-a78900191/",
+        "twitter": "https://twitter.com/vivified_ardour",
+        "facebook": null
+      },
+      "image": "assets/team/7.webp"
+    },
+    {
+      "name": "Biplab Parida",
+      "GDGPost": "Team Member",
+      "CompanyName": "Alphainfy",
+      "social": {
+        "twitter": "https://twitter.com/biplabkparida",
+        "linkedin": "https://www.linkedin.com/in/biplabkparida/",
+        "facebook": "https://www.facebook.com/biplabkparida"
+      },
+      "image": "assets/team/8.webp"
+    }
+  ]
+}

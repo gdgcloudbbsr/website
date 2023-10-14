@@ -1,0 +1,208 @@
+@use "../Utils/" as *;
+
+#Header {
+  z-index: 9999;
+  padding-block: 1rem;
+  padding-bottom: 1rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  @include breakpoints(lg) {
+    padding-bottom: 0.5rem;
+  }
+
+  .logo {
+    width: 300px;
+    object-fit: contain;
+
+    @include breakpoints(mdMax) {
+      width: 250px;
+    }
+    @include breakpoints(smMax) {
+      width: 200px;
+    }
+  }
+
+  &-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .right {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+
+  .navMenu {
+    &-container {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: var(--fs-16);
+      color: var(--neutral);
+      text-transform: capitalize;
+    }
+
+    .links {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -0.4rem;
+        left: 0;
+        width: 0%;
+        height: 4px;
+        background-color: var(--green);
+        border-radius: 1rem;
+        transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -0.4rem;
+        right: 0;
+        width: 0%;
+        height: 4px;
+        background-color: var(--green);
+        border-radius: 1rem;
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+
+      &:hover {
+        opacity: 1;
+        color: var(--neutral);
+        &::after {
+          width: 100%;
+        }
+        &::before {
+          width: 100%;
+        }
+      }
+      .active {
+        position: relative;
+        color: var(--neutral);
+        @include breakpoints(lgMax) {
+          &::after,
+          &::before {
+            background-color: var(--neutral) !important;
+          }
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -0.4rem;
+          left: 0;
+          width: 100%;
+          height: 4px;
+          background-color: var(--green);
+          border-radius: 1rem;
+          transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: -0.4rem;
+          right: 0;
+          width: 100%;
+          height: 4px;
+          background-color: var(--green);
+          border-radius: 1rem;
+          transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+      }
+    }
+  }
+
+  .hamMenu {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 30px;
+    cursor: pointer;
+    aspect-ratio: 1;
+    z-index: 999;
+    overflow: hidden;
+
+    gap: 5px;
+    span {
+      width: 100%;
+      height: 3px;
+      display: block;
+      background-color: var(--gray);
+      border-radius: 1rem !important;
+      transform-origin: 4px 2px;
+      transition: all 0.6s ease-in-out;
+    }
+  }
+
+  .hamMenu.active {
+    span {
+      &:nth-child(1) {
+        rotate: 45deg;
+      }
+      &:nth-child(3) {
+        rotate: -45deg;
+      }
+      &:nth-child(2) {
+        translate: 100px 0;
+      }
+    }
+  }
+
+  @include breakpoints(lgMax) {
+    .PrimaryButton {
+      width: 180px;
+      height: 50px;
+      span {
+        &:first-child {
+          padding-top: 6px;
+        }
+      }
+    }
+    .hamMenu {
+      display: flex;
+    }
+    .navMenu {
+      z-index: 999;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: var(--green);
+      width: 100%;
+      height: 100%;
+      min-height: 100vh;
+      display: grid;
+      place-content: center;
+      translate: 0 -100%;
+      &-container {
+        gap: 2rem;
+        flex-direction: column;
+        text-transform: capitalize;
+        text-align: center;
+        font-size: var(--fs-32);
+        font-weight: bold;
+      }
+
+      .links {
+        translate: 0 -100px;
+        opacity: 0;
+        &::after,
+        &::before {
+          background-color: var(--white);
+        }
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

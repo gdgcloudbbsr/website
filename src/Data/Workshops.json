@@ -1,0 +1,38 @@
+{
+  "Workshops": [
+    {
+      "text": "Deploying a Python Flask Web Application to App Engine Flexible",
+      "date": "Sat, Aug 12, 11:00 AM ( IST )",
+      "online": true,
+      "past": true,
+      "link": "https://gdg.community.dev/events/details/google-gdg-cloud-bhubaneswar-presents-deploying-a-python-flask-web-application-to-app-engine-flexible/"
+    },
+    {
+      "text": "Developing and Deploying Your First Machine Learning Model on Google Cloud",
+      "date": "Sat, May 6, 10:00 AM (IST)",
+      "online": false,
+      "past": true,
+      "placeName": "Srusti Academy of Management - Patia Bhubaneswar, 751024",
+      "mapLink": "https://www.google.com/maps/dir//Patia%20Bhubaneswar",
+      "link": "https://gdg.community.dev/events/details/google-gdg-cloud-bhubaneswar-presents-developing-and-deploying-your-first-machine-learning-model-on-google-cloud/"
+    },
+    {
+      "text": "Product Development Lifecycle",
+      "date": "Sun, Feb 5, 9:30 AM (IST)",
+      "online": false,
+      "past": true,
+      "placeName": "Srusti Academy of Management - 38/1, Chandaka Industrial Estate, Near, Infocity, Patia Bhubaneswar, 751024",
+      "mapLink": "https://www.google.com/maps/dir//38/1%2C%20Chandaka%20Industrial%20Estate%2C%20Near%2C%20Infocity%2C%20Patia%20Bhubaneswar",
+      "link": "https://gdg.community.dev/events/details/google-gdg-cloud-bhubaneswar-presents-product-development-lifecycle/"
+    },
+    {
+      "text": "Workshop on Microservices",
+      "date": "Thu, Nov 17, 2022, 5:00 PM (IST)",
+      "online": false,
+      "past": true,
+      "placeName": "Auditorium ,E -lEARNING CENTER - VSSUT BURLA BURLA, 768018",
+      "mapLink": "https://www.google.com/maps/dir//VSSUT%20BURLA%20BURLA",
+      "link": "https://gdg.community.dev/events/details/google-gdg-cloud-bhubaneswar-presents-workshop-on-microservices/"
+    }
+  ]
+}
